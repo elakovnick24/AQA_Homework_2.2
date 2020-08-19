@@ -8,8 +8,8 @@ public class DeliveryCard {
 
     @Test
     void shoudDeliveryCard() {
-        open("http://localhost:7777");
-        $("[data-test-id='city'] [type=text]").shouldBe(visible).setValue("Санкт-Петербург");
+        open("http://localhost:9999");
+        $("[data-test-id='city'] [type=text]").setValue("Санкт-Петербург");
         $("[data-test-id=date] input").setValue("13.08.2020");
         $("[data-test-id=name] input").setValue("Николай");
         $("[data-test-id=phone] input").setValue("+79111112222");
@@ -21,8 +21,8 @@ public class DeliveryCard {
 
     @Test
     void checkValidationcity() {
-        open("http://localhost:7777");
-        $("[data-test-id='city'] [type=text]").shouldBe(visible).setValue("Выборг");
+        open("http://localhost:9999");
+        $("[data-test-id='city'] [type=text]").setValue("Выборг");
         $("[data-test-id=date] input");
         $("[data-test-id=name] input").setValue("Николай");
         $("[data-test-id=phone] input").setValue("+79111112222");
@@ -33,8 +33,8 @@ public class DeliveryCard {
 
     @Test
     void checkValidationPhone() {
-        open("http://localhost:7777");
-        $("[data-test-id='city'] [type=text]").shouldBe(visible).setValue("Санкт-Петербург");
+        open("http://localhost:9999");
+        $("[data-test-id='city'] [type=text]").setValue("Санкт-Петербург");
         $("[data-test-id=date] input").setValue("13.08.2020");
         $("[data-test-id=name] input").setValue("Николай");
         $("[data-test-id=phone] input").setValue("+791111122220000");
